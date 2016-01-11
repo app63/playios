@@ -49,6 +49,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="182" y="285" width="36" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="DrawAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfh-BA-4Mj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -93,10 +96,15 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="DealBtn" destination="egl-pR-lWO" id="cS7-Fp-1dS"/>
+                        <outlet property="Fcard" destination="KoH-WC-oMa" id="sFw-B9-xN5"/>
+                        <outlet property="Scard" destination="ah0-A2-b3R" id="wNH-PS-ha0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="661.5" y="116"/>
+            <point key="canvasLocation" x="882.75" y="15"/>
         </scene>
     </scenes>
 </document>
