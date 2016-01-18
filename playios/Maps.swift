@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class Maps: UIViewController, CLLocationManagerDelegate {
+class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var MapViewer: MKMapView!
     
@@ -18,31 +18,10 @@ class Maps: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var MapSwitch: UISegmentedControl!
     
-    var locmgr = CLLocationManager()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        MapViewer.showsUserLocation = true
-      
-        // Do any additional setup after loading the view.
         
-        //let loc = CLLocationCoordinate2D(latitude: 40.755527, longitude: -74.142012)
-        let loc2 = CLLocationCoordinate2D(latitude: 40.755251, longitude: -74.142473)
-        
-        let s = MKCoordinateSpan(latitudeDelta: 0.002, longitudeDelta: 0.002)
-        let reg = MKCoordinateRegion(center: loc2, span: s)
-        
-        MapViewer.setRegion(reg, animated: true)
-        
-        
-        let anno = MKPointAnnotation()
-        anno.title = "MY LOCATON"
-        anno.coordinate = loc2
-        
-        MapViewer.addAnnotation(anno)
-        
-        
-        
+     
         
         
         
@@ -69,19 +48,25 @@ class Maps: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    
+    
     @IBAction func FindFunction(sender: AnyObject) {
-        locmgr.delegate = self
-        locmgr.desiredAccuracy = kCLLocationAccuracyBest
-        locmgr.requestWhenInUseAuthorization()
-        locmgr.startUpdatingLocation()
         
-        func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-            print("Error while updating location " + error.localizedDescription)
+        self.MapViewer.delegate = self
+        self.MapViewer.showsUserLocation = true
+        
+        
+
         }
         
         
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        
+        let spanning = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        let mylocation = MKCoordinateRegionMake(userLocation.coordinate, spanning)
+        
+        self.MapViewer.setRegion(mylocation, animated: true)
     }
-    
-   
+
 
 }

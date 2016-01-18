@@ -61,7 +61,7 @@
                                     <navigationItem title="Change Color" id="I0F-dJ-zCs">
                                         <barButtonItem key="rightBarButtonItem" title="Next&gt;" id="jsM-I2-7Ba">
                                             <connections>
-                                                <segue destination="acG-aN-ph8" kind="modal" id="bQI-zS-k0q"/>
+                                                <segue destination="acG-aN-ph8" kind="show" id="ix3-14-Vgq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -157,12 +157,12 @@
                                     <navigationItem title="Second View" id="2aP-GG-kjT">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="4hc-cA-7BQ">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="modal" id="AT8-dk-e5q"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="zik-ag-wkv"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Next&gt;" id="7fZ-Ja-Ejw">
                                             <connections>
-                                                <segue destination="0pR-A4-nz2" kind="modal" id="Y1L-LT-tCV"/>
+                                                <segue destination="0pR-A4-nz2" kind="showDetail" id="2oB-dt-dVZ"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -171,6 +171,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBH-9f-Vgv">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="277" y="424" width="46" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="SecondButtonFunction:" destination="acG-aN-ph8" eventType="touchUpInside" id="6hc-38-5EP"/>
                                 </connections>
@@ -178,8 +181,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOb-Xu-ygr">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="279" y="290" width="42" height="21"/>
+                                </variation>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-Uf-vof">
                                 <rect key="frame" x="-60" y="-14" width="121" height="29"/>
@@ -187,6 +193,9 @@
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="240" y="354" width="121" height="29"/>
+                                </variation>
                                 <connections>
                                     <action selector="Switchfunc:" destination="acG-aN-ph8" eventType="valueChanged" id="oec-m4-xxS"/>
                                 </connections>
@@ -212,13 +221,13 @@
                                 <exclude reference="Yoe-Uf-vof"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="KS5-UM-UKU"/>
+                                <exclude reference="QK5-dg-rIR"/>
+                                <exclude reference="tK4-Az-OSw"/>
                                 <exclude reference="ASv-Q9-ucn"/>
                                 <exclude reference="gj7-Ux-K9u"/>
                                 <exclude reference="c1l-VY-YhW"/>
                                 <exclude reference="ldF-sa-6d8"/>
-                                <exclude reference="KS5-UM-UKU"/>
-                                <exclude reference="QK5-dg-rIR"/>
-                                <exclude reference="tK4-Az-OSw"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -228,13 +237,13 @@
                                 <include reference="Yoe-Uf-vof"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="KS5-UM-UKU"/>
+                                <include reference="QK5-dg-rIR"/>
+                                <include reference="tK4-Az-OSw"/>
                                 <include reference="ASv-Q9-ucn"/>
                                 <include reference="gj7-Ux-K9u"/>
                                 <include reference="c1l-VY-YhW"/>
                                 <include reference="ldF-sa-6d8"/>
-                                <include reference="KS5-UM-UKU"/>
-                                <include reference="QK5-dg-rIR"/>
-                                <include reference="tK4-Az-OSw"/>
                             </mask>
                         </variation>
                     </view>
@@ -267,7 +276,7 @@
                                     <navigationItem title="Maps" id="uVP-gB-SwU">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="fPo-iF-tJV">
                                             <connections>
-                                                <segue destination="acG-aN-ph8" kind="modal" id="rCw-04-bDu"/>
+                                                <segue destination="acG-aN-ph8" kind="show" id="8N2-xI-y2Z"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -300,6 +309,9 @@
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-RI-cFn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0pR-A4-nz2" id="9rB-Q4-ZaA"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,6 +344,6 @@
         <image name="Image" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="rCw-04-bDu"/>
+        <segue reference="8N2-xI-y2Z"/>
     </inferredMetricsTieBreakers>
 </document>
