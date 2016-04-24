@@ -17,6 +17,8 @@
 		488F17771C475EA200437B64 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F17761C475EA200437B64 /* MapKit.framework */; };
 		488F17791C4762FF00437B64 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 488F17781C4762FF00437B64 /* CoreLocation.framework */; };
 		48AF84041C4621B0000CD839 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AF84031C4621B0000CD839 /* ViewController2.swift */; };
+		814A99CC1CCD136E00EFAD6B /* droidcam-1051171720.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 814A99CB1CCD136E00EFAD6B /* droidcam-1051171720.jpg */; };
+		814A99D01CCD17A400EFAD6B /* ImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A99CF1CCD17A400EFAD6B /* ImageFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		488F17761C475EA200437B64 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		488F17781C4762FF00437B64 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		48AF84031C4621B0000CD839 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		814A99CB1CCD136E00EFAD6B /* droidcam-1051171720.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "droidcam-1051171720.jpg"; sourceTree = "<group>"; };
+		814A99CF1CCD17A400EFAD6B /* ImageFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 		4811C39A1C43619600A39F91 /* playios */ = {
 			isa = PBXGroup;
 			children = (
+				814A99CB1CCD136E00EFAD6B /* droidcam-1051171720.jpg */,
 				488F17741C475C0400437B64 /* Main.storyboard */,
 				4811C39B1C43619600A39F91 /* AppDelegate.swift */,
 				4811C39D1C43619600A39F91 /* ViewController.swift */,
@@ -76,6 +81,7 @@
 				4811C3A41C43619600A39F91 /* LaunchScreen.storyboard */,
 				4811C3A71C43619600A39F91 /* Info.plist */,
 				48AF84031C4621B0000CD839 /* ViewController2.swift */,
+				814A99CF1CCD17A400EFAD6B /* ImageFilter.swift */,
 			);
 			path = playios;
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 				488F17751C475C0400437B64 /* Main.storyboard in Resources */,
 				4811C3A61C43619600A39F91 /* LaunchScreen.storyboard in Resources */,
 				4811C3A31C43619600A39F91 /* Assets.xcassets in Resources */,
+				814A99CC1CCD136E00EFAD6B /* droidcam-1051171720.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4811C39E1C43619600A39F91 /* ViewController.swift in Sources */,
+				814A99D01CCD17A400EFAD6B /* ImageFilter.swift in Sources */,
 				4811C39C1C43619600A39F91 /* AppDelegate.swift in Sources */,
 				488F17731C47599700437B64 /* Maps.swift in Sources */,
 				48AF84041C4621B0000CD839 /* ViewController2.swift in Sources */,

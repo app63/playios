@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -148,11 +148,11 @@
                         <viewControllerLayoutGuide type="bottom" id="MnI-bp-5cE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="b6J-j6-OyT">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQh-4p-ZRI">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="400" height="44"/>
                                 <items>
                                     <navigationItem title="Second View" id="2aP-GG-kjT">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="4hc-cA-7BQ">
@@ -267,11 +267,11 @@
                         <viewControllerLayoutGuide type="bottom" id="WTY-mW-sG5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="07g-K8-R7u">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PBn-5U-p2t">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="400" height="44"/>
                                 <items>
                                     <navigationItem title="Maps" id="uVP-gB-SwU">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="fPo-iF-tJV">
@@ -279,11 +279,16 @@
                                                 <segue destination="acG-aN-ph8" kind="show" id="8N2-xI-y2Z"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Next&gt;" id="e9d-Fx-ag7">
+                                            <connections>
+                                                <segue destination="jRq-CJ-hLf" kind="show" id="CGz-zO-90d"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4LY-oq-UrD">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="400" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="LKh-dl-oc2">
                                         <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="VLb-fB-dXc">
@@ -308,7 +313,7 @@
                                 </items>
                             </toolbar>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-RI-cFn">
-                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <rect key="frame" x="0.0" y="64" width="400" height="492"/>
                                 <connections>
                                     <outlet property="delegate" destination="0pR-A4-nz2" id="9rB-Q4-ZaA"/>
                                 </connections>
@@ -339,11 +344,65 @@
             </objects>
             <point key="canvasLocation" x="2585" y="111"/>
         </scene>
+        <!--Filter-->
+        <scene sceneID="vG0-ub-cJL">
+            <objects>
+                <viewController id="EAu-SN-raX" customClass="ImageFilter" customModule="playios" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="droidcam-1051171720.jpg" id="HJe-gY-ktm">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <toolbarItems>
+                        <barButtonItem title="Apply Filter" id="hLb-73-KSk">
+                            <connections>
+                                <action selector="Apply:" destination="EAu-SN-raX" id="X7u-IJ-QrD"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Filter" id="R7U-bU-ySg">
+                        <barButtonItem key="leftBarButtonItem" title="&lt;Back" id="Ik5-NP-oFu">
+                            <connections>
+                                <segue destination="0pR-A4-nz2" kind="show" id="7vY-gH-3uR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="photo" destination="HJe-gY-ktm" id="FSy-0p-DBq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bVh-tb-KE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4537.5" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LUF-Pb-8hy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="jRq-CJ-hLf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9nX-LZ-FdU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="GTv-9e-A1v">
+                        <rect key="frame" x="0.0" y="556" width="400" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="EAu-SN-raX" kind="relationship" relationship="rootViewController" id="Lk7-zu-HnO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xf2-aN-d5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3619.5" y="75"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image" width="60" height="60"/>
+        <image name="droidcam-1051171720.jpg" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="7vY-gH-3uR"/>
         <segue reference="8N2-xI-y2Z"/>
     </inferredMetricsTieBreakers>
 </document>
