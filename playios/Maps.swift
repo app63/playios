@@ -14,16 +14,13 @@ class Maps: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
 
     @IBOutlet weak var MapViewer: MKMapView!
     
-    @IBOutlet weak var Find: UIBarButtonItem!
-    
+  
     @IBOutlet weak var MapSwitch: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     
-        
-        
+
         
     }
 
