@@ -117,7 +117,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-RI-cFn">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7Hi-RI-cFn">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <connections>
                                     <outlet property="delegate" destination="0pR-A4-nz2" id="9rB-Q4-ZaA"/>
@@ -126,24 +126,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7Hi-RI-cFn" secondAttribute="trailing" id="31w-8N-Mo8"/>
                             <constraint firstItem="7Hi-RI-cFn" firstAttribute="top" secondItem="7Kl-3y-Ij9" secondAttribute="bottom" id="6NS-g8-I9e"/>
                             <constraint firstItem="7Hi-RI-cFn" firstAttribute="leading" secondItem="07g-K8-R7u" secondAttribute="leading" id="CPC-9b-Gky"/>
+                            <constraint firstItem="7Hi-RI-cFn" firstAttribute="leading" secondItem="07g-K8-R7u" secondAttribute="leading" id="GmK-MD-we5"/>
                             <constraint firstAttribute="trailing" secondItem="7Hi-RI-cFn" secondAttribute="trailing" id="P7f-V2-18M"/>
+                            <constraint firstAttribute="bottom" secondItem="7Hi-RI-cFn" secondAttribute="bottom" id="sES-PB-Wzn"/>
+                            <constraint firstItem="7Hi-RI-cFn" firstAttribute="top" secondItem="7Kl-3y-Ij9" secondAttribute="bottom" id="vou-0f-WnA"/>
                             <constraint firstItem="WTY-mW-sG5" firstAttribute="top" secondItem="7Hi-RI-cFn" secondAttribute="bottom" id="xX6-ph-qrz"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="31w-8N-Mo8"/>
                                 <exclude reference="6NS-g8-I9e"/>
                                 <exclude reference="CPC-9b-Gky"/>
+                                <exclude reference="GmK-MD-we5"/>
                                 <exclude reference="P7f-V2-18M"/>
+                                <exclude reference="sES-PB-Wzn"/>
+                                <exclude reference="vou-0f-WnA"/>
                                 <exclude reference="xX6-ph-qrz"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
+                                <include reference="31w-8N-Mo8"/>
                                 <include reference="6NS-g8-I9e"/>
                                 <include reference="CPC-9b-Gky"/>
+                                <include reference="GmK-MD-we5"/>
                                 <include reference="P7f-V2-18M"/>
+                                <include reference="sES-PB-Wzn"/>
+                                <include reference="vou-0f-WnA"/>
                                 <include reference="xX6-ph-qrz"/>
                             </mask>
                         </variation>
@@ -162,16 +174,32 @@
                                 <segue destination="mBE-fA-TX7" kind="show" id="Hwu-Jk-wxz"/>
                             </connections>
                         </barButtonItem>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Hif-xb-qpV">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="nsD-FB-FOP">
                             <rect key="frame" x="-60" y="-14" width="121" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="196" id="SRk-pg-d9d"/>
+                                <constraint firstAttribute="height" constant="28" id="tMN-hd-udm"/>
+                            </constraints>
                             <segments>
                                 <segment title="Map"/>
-                                <segment title="Satellite"/>
+                                <segment title="Second"/>
                                 <segment title="Hybrid"/>
                             </segments>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="SRk-pg-d9d"/>
+                                    <exclude reference="tMN-hd-udm"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="SRk-pg-d9d"/>
+                                    <include reference="tMN-hd-udm"/>
+                                </mask>
+                            </variation>
                             <connections>
-                                <action selector="MapSwitchFunc:" destination="0pR-A4-nz2" eventType="valueChanged" id="DRZ-gx-vHK"/>
+                                <action selector="MapSwitchFunc:" destination="0pR-A4-nz2" eventType="valueChanged" id="dOg-0M-p3l"/>
                             </connections>
                         </segmentedControl>
                         <barButtonItem key="rightBarButtonItem" title="Next&gt;" id="c13-dX-Xne">
@@ -181,7 +209,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="MapSwitch" destination="Hif-xb-qpV" id="tEh-RM-LQe"/>
+                        <outlet property="MapSwitch" destination="nsD-FB-FOP" id="j7L-JG-q5Z"/>
                         <outlet property="MapViewer" destination="7Hi-RI-cFn" id="uvm-ze-udm"/>
                     </connections>
                 </viewController>
@@ -272,7 +300,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3ki-SD-tjn">
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="cKL-ky-hyL">
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
@@ -281,7 +309,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNB-p7-KO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3396" y="111"/>
+            <point key="canvasLocation" x="3477" y="51"/>
         </scene>
     </scenes>
     <resources>
